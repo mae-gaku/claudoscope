@@ -1,0 +1,488 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Noto Sans JP',sans-serif">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#11151e"/>
+      <stop offset="1" stop-color="#0b0d12"/>
+    </linearGradient>
+    <linearGradient id="panelGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#161b27"/>
+      <stop offset="1" stop-color="#1c2230"/>
+    </linearGradient>
+    <linearGradient id="kpiTop" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ff8c42"/>
+      <stop offset="1" stop-color="#b58bff"/>
+    </linearGradient>
+    <linearGradient id="logoGrad" cx="0.35" cy="0.35">
+      <stop offset="0" stop-color="#ffb070"/>
+      <stop offset="0.5" stop-color="#ff8c42"/>
+      <stop offset="1" stop-color="#6e2a00"/>
+    </linearGradient>
+    <linearGradient id="areaIn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#5aa9ff" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#5aa9ff" stop-opacity="0.05"/>
+    </linearGradient>
+    <linearGradient id="areaOut" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ff8c42" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#ff8c42" stop-opacity="0.05"/>
+    </linearGradient>
+    <linearGradient id="areaCache" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#b58bff" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#b58bff" stop-opacity="0.05"/>
+    </linearGradient>
+    <linearGradient id="quotaBar" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#5aa9ff"/>
+      <stop offset="1" stop-color="#b58bff"/>
+    </linearGradient>
+    <linearGradient id="barHp" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#38d39f"/>
+      <stop offset="1" stop-color="#ffb070"/>
+    </linearGradient>
+    <linearGradient id="barSat" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#f5b955"/>
+      <stop offset="1" stop-color="#ff8c42"/>
+    </linearGradient>
+    <linearGradient id="barMood" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#b58bff"/>
+      <stop offset="1" stop-color="#5aa9ff"/>
+    </linearGradient>
+    <linearGradient id="barXp" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#38c4d3"/>
+      <stop offset="1" stop-color="#38d39f"/>
+    </linearGradient>
+    <linearGradient id="companionBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1c2536"/>
+      <stop offset="1" stop-color="#11151e"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#000" flood-opacity="0.45"/>
+    </filter>
+    <filter id="companionShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="18" flood-color="#000" flood-opacity="0.6"/>
+    </filter>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1600" height="1000" fill="#0b0d12"/>
+
+  <!-- ========== TOPBAR ========== -->
+  <g>
+    <rect x="0" y="0" width="1600" height="50" fill="url(#bgGrad)"/>
+    <line x1="0" y1="50" x2="1600" y2="50" stroke="#232a3a"/>
+    <!-- logo -->
+    <circle cx="32" cy="25" r="11" fill="url(#logoGrad)" filter="url(#glow)"/>
+    <text x="52" y="30" fill="#e8ecf3" font-size="15" font-weight="700">Claudoscope</text>
+    <text x="148" y="30" fill="#8a93a6" font-size="12">See what your AI is doing</text>
+    <!-- status -->
+    <circle cx="1390" cy="25" r="4" fill="#38d39f" filter="url(#glow)"/>
+    <text x="1402" y="29" fill="#8a93a6" font-size="12">connected</text>
+    <text x="1478" y="29" fill="#8a93a6" font-size="12" opacity="0.5">·</text>
+    <text x="1490" y="29" fill="#8a93a6" font-size="12">updated 14:32:08</text>
+  </g>
+
+  <!-- ========== KPI CARDS ========== -->
+  <g font-family="-apple-system,sans-serif">
+    <!-- KPI 1: API cost -->
+    <g transform="translate(18,68)" filter="url(#shadow)">
+      <rect width="380.5" height="80" rx="10" fill="url(#panelGrad)" stroke="#232a3a"/>
+      <rect width="380.5" height="2" rx="1" fill="url(#kpiTop)"/>
+      <text x="18" y="26" fill="#8a93a6" font-size="11" letter-spacing="0.6" font-weight="600">API COST · ALL TIME</text>
+      <text x="18" y="58" fill="#e8ecf3" font-size="26" font-weight="700">$42.37</text>
+      <text x="18" y="74" fill="#8a93a6" font-size="11">3 models · API-equivalent</text>
+    </g>
+    <!-- KPI 2: Total tokens -->
+    <g transform="translate(412.5,68)" filter="url(#shadow)">
+      <rect width="380.5" height="80" rx="10" fill="url(#panelGrad)" stroke="#232a3a"/>
+      <rect width="380.5" height="2" rx="1" fill="url(#kpiTop)"/>
+      <text x="18" y="26" fill="#8a93a6" font-size="11" letter-spacing="0.6" font-weight="600">TOTAL TOKENS</text>
+      <text x="18" y="58" fill="#e8ecf3" font-size="26" font-weight="700">12.4M</text>
+      <text x="18" y="74" fill="#8a93a6" font-size="11">in 3.2M · out 1.8M · cache 7.4M</text>
+    </g>
+    <!-- KPI 3: Active sessions -->
+    <g transform="translate(807,68)" filter="url(#shadow)">
+      <rect width="380.5" height="80" rx="10" fill="url(#panelGrad)" stroke="#232a3a"/>
+      <rect width="380.5" height="2" rx="1" fill="url(#kpiTop)"/>
+      <text x="18" y="26" fill="#8a93a6" font-size="11" letter-spacing="0.6" font-weight="600">ACTIVE SESSIONS</text>
+      <text x="18" y="58" fill="#e8ecf3" font-size="26" font-weight="700">3</text>
+      <text x="50" y="58" fill="#38d39f" font-size="13" font-weight="600">● live</text>
+      <text x="18" y="74" fill="#8a93a6" font-size="11">of 18 total · last 5 min</text>
+    </g>
+    <!-- KPI 4: Tool calls -->
+    <g transform="translate(1201.5,68)" filter="url(#shadow)">
+      <rect width="380.5" height="80" rx="10" fill="url(#panelGrad)" stroke="#232a3a"/>
+      <rect width="380.5" height="2" rx="1" fill="url(#kpiTop)"/>
+      <text x="18" y="26" fill="#8a93a6" font-size="11" letter-spacing="0.6" font-weight="600">TOOL CALLS</text>
+      <text x="18" y="58" fill="#e8ecf3" font-size="26" font-weight="700">287</text>
+      <text x="18" y="74" fill="#8a93a6" font-size="11">4 errors</text>
+    </g>
+  </g>
+
+  <!-- ========== GAUGE PANEL (5h usage) ========== -->
+  <g transform="translate(18,162)" filter="url(#shadow)">
+    <rect width="775" height="260" rx="10" fill="#161b27" stroke="#232a3a"/>
+    <text x="18" y="28" fill="#e8ecf3" font-size="12" font-weight="600" letter-spacing="0.6">5H SESSION USAGE</text>
+    <text x="650" y="28" fill="#8a93a6" font-size="11">Claude Max 5× · live</text>
+
+    <!-- doughnut gauge (64%) -->
+    <g transform="translate(105,150)">
+      <circle r="80" cx="0" cy="0" fill="none" stroke="#232a3a" stroke-width="18"/>
+      <!-- 64% of 360 = 230.4deg arc; SVG arc -->
+      <path d="M 0 -80 A 80 80 0 1 1 -54.9 58.2" fill="none" stroke="#ff8c42" stroke-width="18" stroke-linecap="round"/>
+      <text x="0" y="-2" fill="#e8ecf3" font-size="30" font-weight="700" text-anchor="middle">64%</text>
+      <text x="0" y="20" fill="#8a93a6" font-size="11" text-anchor="middle">resets 17:30</text>
+    </g>
+
+    <!-- gauge stats -->
+    <g transform="translate(230,80)" font-size="12">
+      <text fill="#8a93a6">Messages</text><text x="220" fill="#e8ecf3" text-anchor="end" font-weight="600">186</text>
+      <line x1="0" y1="8" x2="220" y2="8" stroke="#232a3a" stroke-dasharray="3 3"/>
+      <text y="26" fill="#8a93a6">Tool calls</text><text x="220" y="26" fill="#e8ecf3" text-anchor="end" font-weight="600">142</text>
+      <line x1="0" y1="34" x2="220" y2="34" stroke="#232a3a" stroke-dasharray="3 3"/>
+      <text y="52" fill="#8a93a6">Tokens</text><text x="220" y="52" fill="#e8ecf3" text-anchor="end" font-weight="600">4.8M</text>
+      <line x1="0" y1="60" x2="220" y2="60" stroke="#232a3a" stroke-dasharray="3 3"/>
+      <text y="78" fill="#8a93a6">Limit hits</text><text x="220" y="78" fill="#e8ecf3" text-anchor="end" font-weight="600">0</text>
+    </g>
+
+    <!-- quota bars (7d) -->
+    <g transform="translate(225,180)" font-size="11">
+      <text fill="#8a93a6">7-day window</text>
+      <rect x="92" y="-8" width="280" height="6" rx="3" fill="#232a3a"/>
+      <rect x="92" y="-8" width="118" height="6" rx="3" fill="url(#quotaBar)"/>
+      <text x="382" fill="#e8ecf3" text-anchor="end">42%</text>
+
+      <text y="22" fill="#8a93a6">7d Opus</text>
+      <rect x="92" y="14" width="280" height="6" rx="3" fill="#232a3a"/>
+      <rect x="92" y="14" width="190" height="6" rx="3" fill="url(#quotaBar)"/>
+      <text x="382" y="22" fill="#e8ecf3" text-anchor="end">68%</text>
+
+      <text y="44" fill="#8a93a6">7d Sonnet</text>
+      <rect x="92" y="36" width="280" height="6" rx="3" fill="#232a3a"/>
+      <rect x="92" y="36" width="84" height="6" rx="3" fill="url(#quotaBar)"/>
+      <text x="382" y="44" fill="#e8ecf3" text-anchor="end">30%</text>
+    </g>
+  </g>
+
+  <!-- ========== API COST PANEL ========== -->
+  <g transform="translate(807,162)" filter="url(#shadow)">
+    <rect width="775" height="260" rx="10" fill="#161b27" stroke="#232a3a"/>
+    <text x="18" y="28" fill="#e8ecf3" font-size="12" font-weight="600" letter-spacing="0.6">API COST · BREAKDOWN</text>
+    <text x="640" y="28" fill="#8a93a6" font-size="11">5h window vs lifetime</text>
+
+    <g transform="translate(18,52)">
+      <line x1="0" y1="38" x2="740" y2="38" stroke="#232a3a"/>
+      <text x="0" y="30" fill="#8a93a6" font-size="11" letter-spacing="0.5" font-weight="600">LAST 5H</text>
+      <text x="740" y="30" fill="#ff8c42" font-size="22" font-weight="700" text-anchor="end">$8.45</text>
+
+      <line x1="0" y1="80" x2="740" y2="80" stroke="#232a3a"/>
+      <text x="0" y="72" fill="#8a93a6" font-size="11" letter-spacing="0.5" font-weight="600">LAST 60 MIN</text>
+      <text x="740" y="72" fill="#ff8c42" font-size="22" font-weight="700" text-anchor="end">$2.18</text>
+
+      <line x1="0" y1="122" x2="740" y2="122" stroke="#232a3a"/>
+      <text x="0" y="114" fill="#8a93a6" font-size="11" letter-spacing="0.5" font-weight="600">LIFETIME</text>
+      <text x="740" y="114" fill="#ff8c42" font-size="22" font-weight="700" text-anchor="end">$42.37</text>
+
+      <text x="0" y="158" fill="#8a93a6" font-size="11">Avg cost / message</text>
+      <text x="740" y="158" fill="#8a93a6" font-size="11" text-anchor="end">$0.0234 × 1.81k msg</text>
+
+      <text x="0" y="180" fill="#8a93a6" font-size="11">Limit hits (lifetime)</text>
+      <text x="740" y="180" fill="#8a93a6" font-size="11" text-anchor="end">2</text>
+    </g>
+  </g>
+
+  <!-- ========== TIMELINE (token throughput, wide) ========== -->
+  <g transform="translate(18,436)" filter="url(#shadow)">
+    <rect width="1564" height="260" rx="10" fill="#161b27" stroke="#232a3a"/>
+    <text x="18" y="28" fill="#e8ecf3" font-size="12" font-weight="600" letter-spacing="0.6">TOKEN THROUGHPUT · LAST 60 MIN</text>
+    <text x="1450" y="28" fill="#8a93a6" font-size="11">4.8M tok / 60min</text>
+
+    <!-- Chart axes/grid -->
+    <g transform="translate(40,52)" font-size="10" fill="#8a93a6">
+      <line x1="0" y1="0" x2="0" y2="170" stroke="#232a3a"/>
+      <line x1="0" y1="170" x2="1500" y2="170" stroke="#232a3a"/>
+      <!-- horizontal grid lines -->
+      <line x1="0" y1="42" x2="1500" y2="42" stroke="#232a3a" opacity="0.5"/>
+      <line x1="0" y1="85" x2="1500" y2="85" stroke="#232a3a" opacity="0.5"/>
+      <line x1="0" y1="128" x2="1500" y2="128" stroke="#232a3a" opacity="0.5"/>
+      <text x="-6" y="172" text-anchor="end">0</text>
+      <text x="-6" y="132" text-anchor="end">40k</text>
+      <text x="-6" y="89" text-anchor="end">80k</text>
+      <text x="-6" y="46" text-anchor="end">120k</text>
+      <text x="-6" y="4" text-anchor="end">160k</text>
+
+      <!-- x-axis time labels -->
+      <text x="0" y="186">13:32</text>
+      <text x="240" y="186">13:42</text>
+      <text x="480" y="186">13:52</text>
+      <text x="720" y="186">14:02</text>
+      <text x="960" y="186">14:12</text>
+      <text x="1200" y="186">14:22</text>
+      <text x="1440" y="186">14:32</text>
+
+      <!-- Stacked area: cache (back), output (mid), input (front) -->
+      <!-- cache layer -->
+      <path d="M 0 165 L 25 160 L 50 155 L 75 158 L 100 150 L 125 140 L 150 135 L 175 130 L 200 138 L 225 120 L 250 115 L 275 105 L 300 110 L 325 95 L 350 88 L 375 95 L 400 80 L 425 75 L 450 82 L 475 70 L 500 60 L 525 65 L 550 55 L 575 50 L 600 58 L 625 45 L 650 40 L 675 48 L 700 35 L 725 28 L 750 32 L 775 22 L 800 28 L 825 18 L 850 12 L 875 18 L 900 25 L 925 15 L 950 10 L 975 18 L 1000 22 L 1025 14 L 1050 8 L 1075 12 L 1100 5 L 1125 12 L 1150 18 L 1175 10 L 1200 6 L 1225 12 L 1250 4 L 1275 8 L 1300 14 L 1325 10 L 1350 5 L 1375 12 L 1400 8 L 1425 4 L 1450 10 L 1475 6 L 1500 12 L 1500 170 L 0 170 Z" fill="url(#areaCache)" stroke="#b58bff" stroke-width="1.5"/>
+      <!-- output layer (above cache) -->
+      <path d="M 0 168 L 25 165 L 50 160 L 75 162 L 100 156 L 125 148 L 150 144 L 175 140 L 200 145 L 225 132 L 250 128 L 275 120 L 300 124 L 325 112 L 350 106 L 375 112 L 400 100 L 425 95 L 450 102 L 475 92 L 500 84 L 525 88 L 550 80 L 575 76 L 600 82 L 625 72 L 650 68 L 675 75 L 700 64 L 725 58 L 750 62 L 775 54 L 800 60 L 825 50 L 850 45 L 875 50 L 900 56 L 925 48 L 950 44 L 975 50 L 1000 54 L 1025 46 L 1050 42 L 1075 46 L 1100 38 L 1125 44 L 1150 50 L 1175 42 L 1200 40 L 1225 46 L 1250 36 L 1275 40 L 1300 46 L 1325 42 L 1350 38 L 1375 44 L 1400 40 L 1425 36 L 1450 42 L 1475 38 L 1500 44 L 1500 170 L 0 170 Z" fill="url(#areaOut)" stroke="#ff8c42" stroke-width="1.8"/>
+      <!-- input layer (above output) -->
+      <path d="M 0 170 L 25 168 L 50 165 L 75 167 L 100 163 L 125 158 L 150 155 L 175 152 L 200 156 L 225 145 L 250 142 L 275 136 L 300 140 L 325 130 L 350 125 L 375 130 L 400 120 L 425 116 L 450 122 L 475 113 L 500 106 L 525 110 L 550 102 L 575 99 L 600 104 L 625 96 L 650 92 L 675 98 L 700 88 L 725 83 L 750 86 L 775 80 L 800 84 L 825 76 L 850 72 L 875 76 L 900 81 L 925 74 L 950 70 L 975 76 L 1000 80 L 1025 73 L 1050 69 L 1075 73 L 1100 65 L 1125 71 L 1150 77 L 1175 68 L 1200 66 L 1225 72 L 1250 62 L 1275 66 L 1300 72 L 1325 68 L 1350 64 L 1375 70 L 1400 65 L 1425 62 L 1450 68 L 1475 64 L 1500 70 L 1500 170 L 0 170 Z" fill="url(#areaIn)" stroke="#5aa9ff" stroke-width="1.8"/>
+
+      <!-- "live" pulse marker at the latest point -->
+      <circle cx="1500" cy="70" r="6" fill="#ff8c42" opacity="0.4"/>
+      <circle cx="1500" cy="70" r="3" fill="#ff8c42"/>
+    </g>
+
+    <!-- Legend -->
+    <g transform="translate(1180,52)" font-size="11">
+      <rect x="0" y="-2" width="10" height="10" rx="2" fill="#5aa9ff"/>
+      <text x="16" y="7" fill="#8a93a6">Input</text>
+      <rect x="70" y="-2" width="10" height="10" rx="2" fill="#ff8c42"/>
+      <text x="86" y="7" fill="#8a93a6">Output</text>
+      <rect x="148" y="-2" width="10" height="10" rx="2" fill="#b58bff"/>
+      <text x="164" y="7" fill="#8a93a6">Cache</text>
+    </g>
+  </g>
+
+  <!-- ========== TOOLS BAR CHART ========== -->
+  <g transform="translate(18,710)" filter="url(#shadow)">
+    <rect width="775" height="260" rx="10" fill="#161b27" stroke="#232a3a"/>
+    <text x="18" y="28" fill="#e8ecf3" font-size="12" font-weight="600" letter-spacing="0.6">TOOL USAGE</text>
+    <text x="690" y="28" fill="#8a93a6" font-size="11">all sessions</text>
+
+    <g transform="translate(110,52)" font-size="11">
+      <!-- bar rows: name (left, right-aligned), bar, value -->
+      <g font-family="ui-monospace,Menlo,monospace">
+        <text x="-10" y="14" fill="#e8ecf3" text-anchor="end">Read</text>
+        <rect x="0" y="4" width="500" height="14" rx="3" fill="#1c2230"/>
+        <rect x="0" y="4" width="480" height="14" rx="3" fill="#ff8c42"/>
+        <text x="490" y="14" fill="#e8ecf3" text-anchor="end" font-weight="600">128</text>
+
+        <text x="-10" y="40" fill="#e8ecf3" text-anchor="end">Edit</text>
+        <rect x="0" y="30" width="500" height="14" rx="3" fill="#1c2230"/>
+        <rect x="0" y="30" width="340" height="14" rx="3" fill="#ff8c42"/>
+        <text x="350" y="40" fill="#e8ecf3" text-anchor="end" font-weight="600">91</text>
+
+        <text x="-10" y="66" fill="#e8ecf3" text-anchor="end">Bash</text>
+        <rect x="0" y="56" width="500" height="14" rx="3" fill="#1c2230"/>
+        <rect x="0" y="56" width="222" height="14" rx="3" fill="#ff8c42"/>
+        <text x="232" y="66" fill="#e8ecf3" text-anchor="end" font-weight="600">59</text>
+
+        <text x="-10" y="92" fill="#e8ecf3" text-anchor="end">Grep</text>
+        <rect x="0" y="82" width="500" height="14" rx="3" fill="#1c2230"/>
+        <rect x="0" y="82" width="148" height="14" rx="3" fill="#ff8c42"/>
+        <text x="158" y="92" fill="#e8ecf3" text-anchor="end" font-weight="600">40</text>
+
+        <text x="-10" y="118" fill="#e8ecf3" text-anchor="end">Glob</text>
+        <rect x="0" y="108" width="500" height="14" rx="3" fill="#1c2230"/>
+        <rect x="0" y="108" width="96" height="14" rx="3" fill="#ff8c42"/>
+        <text x="106" y="118" fill="#e8ecf3" text-anchor="end" font-weight="600">26</text>
+
+        <text x="-10" y="144" fill="#e8ecf3" text-anchor="end">WebFetch</text>
+        <rect x="0" y="134" width="500" height="14" rx="3" fill="#1c2230"/>
+        <rect x="0" y="134" width="62" height="14" rx="3" fill="#ff8c42"/>
+        <text x="72" y="144" fill="#e8ecf3" text-anchor="end" font-weight="600">17</text>
+
+        <text x="-10" y="170" fill="#e8ecf3" text-anchor="end">Write</text>
+        <rect x="0" y="160" width="500" height="14" rx="3" fill="#1c2230"/>
+        <rect x="0" y="160" width="44" height="14" rx="3" fill="#ff8c42"/>
+        <text x="54" y="170" fill="#e8ecf3" text-anchor="end" font-weight="600">12</text>
+
+        <text x="-10" y="196" fill="#e8ecf3" text-anchor="end">Task</text>
+        <rect x="0" y="186" width="500" height="14" rx="3" fill="#1c2230"/>
+        <rect x="0" y="186" width="28" height="14" rx="3" fill="#ff8c42"/>
+        <text x="38" y="196" fill="#e8ecf3" text-anchor="end" font-weight="600">8</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- ========== MODELS DONUT ========== -->
+  <g transform="translate(807,710)" filter="url(#shadow)">
+    <rect width="380.5" height="260" rx="10" fill="#161b27" stroke="#232a3a"/>
+    <text x="18" y="28" fill="#e8ecf3" font-size="12" font-weight="600" letter-spacing="0.6">MODELS</text>
+    <text x="332" y="28" fill="#8a93a6" font-size="11">cost by model</text>
+
+    <!-- donut: 3 segments. opus 55%, sonnet 35%, haiku 10% -->
+    <g transform="translate(105,150)">
+      <!-- Background ring -->
+      <circle r="65" cx="0" cy="0" fill="none" stroke="#161b27" stroke-width="2"/>
+      <!-- Opus 55% = 198deg -->
+      <path d="M 0 -65 A 65 65 0 1 1 -52.6 38.1 L 0 0 Z" fill="#ff8c42"/>
+      <!-- Sonnet 35% = 126deg (starting at 198deg) -->
+      <path d="M -52.6 38.1 A 65 65 0 0 1 53.6 36.7 L 0 0 Z" fill="#5aa9ff"/>
+      <!-- Haiku 10% = 36deg (starting at 324deg) -->
+      <path d="M 53.6 36.7 A 65 65 0 0 1 0 -65 L 0 0 Z" fill="#b58bff"/>
+      <!-- inner hole -->
+      <circle r="40" cx="0" cy="0" fill="#161b27"/>
+    </g>
+
+    <!-- legend -->
+    <g transform="translate(210,100)" font-size="11">
+      <rect x="0" y="0" width="10" height="10" rx="2" fill="#ff8c42"/>
+      <text x="16" y="9" fill="#e8ecf3">opus-4-7</text>
+      <text x="160" y="9" fill="#8a93a6" text-anchor="end">$23.30</text>
+
+      <rect x="0" y="24" width="10" height="10" rx="2" fill="#5aa9ff"/>
+      <text x="16" y="33" fill="#e8ecf3">sonnet-4-6</text>
+      <text x="160" y="33" fill="#8a93a6" text-anchor="end">$14.83</text>
+
+      <rect x="0" y="48" width="10" height="10" rx="2" fill="#b58bff"/>
+      <text x="16" y="57" fill="#e8ecf3">haiku-4-5</text>
+      <text x="160" y="57" fill="#8a93a6" text-anchor="end">$4.24</text>
+    </g>
+  </g>
+
+  <!-- ========== LIVE SESSIONS (mini) ========== -->
+  <g transform="translate(1201.5,710)" filter="url(#shadow)">
+    <rect width="380.5" height="260" rx="10" fill="#161b27" stroke="#232a3a"/>
+    <text x="18" y="28" fill="#e8ecf3" font-size="12" font-weight="600" letter-spacing="0.6">LIVE SESSIONS</text>
+    <text x="332" y="28" fill="#8a93a6" font-size="11">3 live · 18 total</text>
+
+    <!-- session card 1 -->
+    <g transform="translate(14,46)">
+      <rect width="352" height="62" rx="8" fill="#1c2230" stroke="#38d39f" stroke-opacity="0.4"/>
+      <rect x="8" y="8" width="34" height="14" rx="7" fill="#38d39f" fill-opacity="0.18"/>
+      <text x="25" y="18" fill="#38d39f" font-size="9" font-weight="700" letter-spacing="0.5" text-anchor="middle">LIVE</text>
+      <rect x="48" y="8" width="36" height="14" rx="7" fill="#5aa9ff" fill-opacity="0.18"/>
+      <text x="66" y="18" fill="#5aa9ff" font-size="9" font-weight="700" text-anchor="middle">EDIT</text>
+      <text x="92" y="19" fill="#8a93a6" font-size="10">2s ago</text>
+      <text x="8" y="36" fill="#8a93a6" font-family="ui-monospace,Menlo,monospace" font-size="10">…/claudoscope @ main</text>
+      <text x="8" y="52" fill="#8a93a6" font-size="10">86 msg · 47 tools · 1.8M · $6.21</text>
+    </g>
+
+    <!-- session card 2 -->
+    <g transform="translate(14,118)">
+      <rect width="352" height="62" rx="8" fill="#1c2230" stroke="#232a3a"/>
+      <rect x="8" y="8" width="34" height="14" rx="7" fill="#38d39f" fill-opacity="0.18"/>
+      <text x="25" y="18" fill="#38d39f" font-size="9" font-weight="700" letter-spacing="0.5" text-anchor="middle">LIVE</text>
+      <rect x="48" y="8" width="36" height="14" rx="7" fill="#5aa9ff" fill-opacity="0.18"/>
+      <text x="66" y="18" fill="#5aa9ff" font-size="9" font-weight="700" text-anchor="middle">READ</text>
+      <text x="92" y="19" fill="#8a93a6" font-size="10">11s ago</text>
+      <text x="8" y="36" fill="#8a93a6" font-family="ui-monospace,Menlo,monospace" font-size="10">…/api-gateway @ feat/auth</text>
+      <text x="8" y="52" fill="#8a93a6" font-size="10">52 msg · 38 tools · 1.1M · $3.96</text>
+    </g>
+
+    <!-- session card 3 -->
+    <g transform="translate(14,190)">
+      <rect width="352" height="62" rx="8" fill="#1c2230" stroke="#232a3a"/>
+      <rect x="8" y="8" width="34" height="14" rx="7" fill="#2b3142"/>
+      <text x="25" y="18" fill="#8a93a6" font-size="9" font-weight="700" letter-spacing="0.5" text-anchor="middle">IDLE</text>
+      <rect x="48" y="8" width="38" height="14" rx="7" fill="#5aa9ff" fill-opacity="0.18"/>
+      <text x="67" y="18" fill="#5aa9ff" font-size="9" font-weight="700" text-anchor="middle">BASH</text>
+      <text x="94" y="19" fill="#8a93a6" font-size="10">3m ago</text>
+      <text x="8" y="36" fill="#8a93a6" font-family="ui-monospace,Menlo,monospace" font-size="10">…/landing-page @ main</text>
+      <text x="8" y="52" fill="#8a93a6" font-size="10">48 msg · 57 tools · 1.9M · $5.43</text>
+    </g>
+  </g>
+
+  <!-- ========== FOOTER ========== -->
+  <g>
+    <line x1="0" y1="982" x2="1600" y2="982" stroke="#232a3a"/>
+    <text x="22" y="996" fill="#8a93a6" font-size="11">Claudoscope v0.1.0 · MIT</text>
+    <text x="1578" y="996" fill="#ff8c42" font-size="11" text-anchor="end">github.com/mae-gaku/claudoscope</text>
+  </g>
+
+  <!-- ========== AI COMPANION (bottom-right overlay) ========== -->
+  <g transform="translate(1262,500)" filter="url(#companionShadow)">
+    <rect width="306" height="442" rx="14" fill="url(#companionBg)" stroke="#232a3a" stroke-width="1.5"/>
+
+    <!-- head -->
+    <g transform="translate(16,20)">
+      <text x="0" y="22" font-family="ui-monospace,Menlo,monospace" font-size="22" fill="#e8ecf3">(✿◕‿◕)</text>
+      <text x="106" y="22" fill="#e8ecf3" font-size="15" font-weight="700">Claudie</text>
+      <rect x="186" y="6" width="46" height="20" rx="10" fill="#ff8c42" fill-opacity="0.15"/>
+      <text x="209" y="20" fill="#ff8c42" font-size="11" font-weight="700" text-anchor="middle">Lv.12</text>
+      <text x="262" y="22" fill="#8a93a6" font-size="18" font-weight="400">×</text>
+    </g>
+
+    <!-- state -->
+    <g>
+      <line x1="16" y1="64" x2="290" y2="64" stroke="#232a3a" stroke-dasharray="2 3"/>
+      <text x="153" y="82" fill="#38d39f" font-size="10.5" letter-spacing="0.8" font-weight="600" text-anchor="middle">HAPPY ✨</text>
+      <line x1="16" y1="92" x2="290" y2="92" stroke="#232a3a" stroke-dasharray="2 3"/>
+    </g>
+
+    <!-- bars -->
+    <g transform="translate(16,108)" font-size="10.5">
+      <text x="0" y="9" fill="#8a93a6">HP</text>
+      <rect x="40" y="3" width="200" height="7" rx="3.5" fill="#232a3a"/>
+      <rect x="40" y="3" width="172" height="7" rx="3.5" fill="url(#barHp)"/>
+      <text x="278" y="9" fill="#e8ecf3" text-anchor="end" font-weight="600">86%</text>
+
+      <text x="0" y="29" fill="#8a93a6">満腹</text>
+      <rect x="40" y="23" width="200" height="7" rx="3.5" fill="#232a3a"/>
+      <rect x="40" y="23" width="142" height="7" rx="3.5" fill="url(#barSat)"/>
+      <text x="278" y="29" fill="#e8ecf3" text-anchor="end" font-weight="600">71%</text>
+
+      <text x="0" y="49" fill="#8a93a6">機嫌</text>
+      <rect x="40" y="43" width="200" height="7" rx="3.5" fill="#232a3a"/>
+      <rect x="40" y="43" width="186" height="7" rx="3.5" fill="url(#barMood)"/>
+      <text x="278" y="49" fill="#e8ecf3" text-anchor="end" font-weight="600">93%</text>
+
+      <text x="0" y="69" fill="#8a93a6">XP</text>
+      <rect x="40" y="63" width="200" height="7" rx="3.5" fill="#232a3a"/>
+      <rect x="40" y="63" width="124" height="7" rx="3.5" fill="url(#barXp)"/>
+      <text x="278" y="69" fill="#e8ecf3" text-anchor="end" font-weight="600">62%</text>
+    </g>
+
+    <!-- stats row -->
+    <g transform="translate(16,200)">
+      <line x1="0" y1="-8" x2="274" y2="-8" stroke="#232a3a" stroke-dasharray="2 3"/>
+      <text x="0" y="9" font-size="11" fill="#8a93a6">📚 <tspan fill="#e8ecf3" font-weight="700">428</tspan></text>
+      <text x="74" y="9" font-size="11" fill="#8a93a6">🎨 <tspan fill="#e8ecf3" font-weight="700">196</tspan></text>
+      <text x="148" y="9" font-size="11" fill="#8a93a6">❤ <tspan fill="#e8ecf3" font-weight="700">84</tspan></text>
+      <text x="208" y="9" font-size="11" fill="#8a93a6">🧬 <tspan fill="#e8ecf3" font-weight="700">knowledge</tspan></text>
+    </g>
+
+    <!-- recent log -->
+    <g transform="translate(16,228)">
+      <rect width="274" height="92" rx="6" fill="#0e121a"/>
+      <g font-family="ui-monospace,Menlo,monospace" font-size="10" fill="#8a93a6">
+        <text x="8" y="16">14:32:08 +5 xp (code)</text>
+        <text x="8" y="30">14:31:52 +5 xp (code)</text>
+        <text x="8" y="44">14:31:35 +7 xp (longform)</text>
+        <text x="8" y="58" fill="#38d39f">14:30:18 ⬆ Level up! Lv.12</text>
+        <text x="8" y="72" fill="#ffb070">14:30:18 🌱 Evolved → Lv.10 (knowledge)</text>
+        <text x="8" y="86">14:29:44 +3 xp (search)</text>
+      </g>
+    </g>
+
+    <!-- action buttons -->
+    <g transform="translate(16,334)">
+      <rect width="132" height="28" rx="6" fill="#1f2638" stroke="#232a3a"/>
+      <text x="66" y="18" fill="#ff8c42" font-size="11" text-anchor="middle" font-weight="600">なでる ❤</text>
+      <rect x="142" width="132" height="28" rx="6" fill="#1f2638" stroke="#232a3a"/>
+      <text x="208" y="18" fill="#e8ecf3" font-size="11" text-anchor="middle" font-weight="600">改名</text>
+    </g>
+
+    <!-- footer note -->
+    <text x="153" y="392" fill="#8a93a6" font-size="9.5" text-anchor="middle" opacity="0.75">育成: 既存ログから自動 · LLMコール 0</text>
+
+    <!-- "live updating" indicator -->
+    <g transform="translate(258,76)">
+      <circle r="3" fill="#38d39f" filter="url(#glow)">
+        <animate attributeName="r" values="3;5;3" dur="1.6s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+  </g>
+
+  <!-- ========== Annotation arrows (subtle, English+JP) ========== -->
+  <g font-size="11" fill="#ffb070" opacity="0.95">
+    <!-- pointing to gauge -->
+    <g>
+      <text x="280" y="226" font-weight="700">↑ Live from Anthropic /usage</text>
+      <text x="280" y="242" fill="#8a93a6" font-weight="400">same data as Claude.ai dashboard</text>
+    </g>
+    <!-- pointing to timeline -->
+    <g transform="translate(1410,520)">
+      <text font-weight="700" text-anchor="end">Real-time stream ←</text>
+      <text y="16" fill="#8a93a6" font-weight="400" text-anchor="end">updates as JSONL is appended</text>
+    </g>
+    <!-- pointing to companion -->
+    <g transform="translate(1240,560)">
+      <text font-weight="700" text-anchor="end">育成中 →</text>
+      <text y="16" fill="#8a93a6" font-weight="400" text-anchor="end">tool使用が知識に・LLMコール 0</text>
+    </g>
+  </g>
+</svg>

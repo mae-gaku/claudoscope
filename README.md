@@ -2,7 +2,11 @@
 
 > A real-time observability scope for [Claude Code](https://claude.com/claude-code) — see what your AI is doing.
 
+![Claudoscope dashboard with live AI Companion](docs/screenshot.svg)
+
 `Claudoscope` watches your local `~/.claude/projects/**/*.jsonl` session logs *and* fetches your actual Claude subscription quota from Anthropic, then renders a live Grafana-style dashboard at `http://localhost:4317`. No prompt content leaves your machine — only your existing OAuth token is reused to read the same `/usage` numbers that the official Claude UI shows.
+
+The dashboard updates in real time as Claude works — and a tamagotchi-style **AI Companion** in the corner grows from the same activity stream, deriving every nutrient from your existing JSONL events. **Zero extra LLM calls. Zero extra tokens.**
 
 ```
 $ npx claudoscope
