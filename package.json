@@ -1,0 +1,51 @@
+{
+  "name": "claudoscope",
+  "version": "0.1.0",
+  "description": "Real-time observability scope for Claude Code — visualize tokens, cost, tool usage, sessions, and live quota in your browser.",
+  "keywords": [
+    "claude",
+    "claude-code",
+    "anthropic",
+    "dashboard",
+    "monitoring",
+    "observability",
+    "metrics",
+    "tokens",
+    "cost",
+    "grafana",
+    "cli"
+  ],
+  "author": "Claudoscope contributors",
+  "license": "MIT",
+  "homepage": "https://github.com/mae-gaku/claudoscope",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mae-gaku/claudoscope.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mae-gaku/claudoscope/issues"
+  },
+  "type": "module",
+  "bin": {
+    "claudoscope": "./bin/claudoscope.js"
+  },
+  "main": "./src/server.js",
+  "files": [
+    "bin/",
+    "src/",
+    "public/",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "start": "node bin/claudoscope.js",
+    "dev": "node bin/claudoscope.js --no-open",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "chokidar": "^3.6.0"
+  }
+}

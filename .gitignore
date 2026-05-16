@@ -1,0 +1,30 @@
+# Dependencies
+node_modules/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.log
+
+# Editor / OS
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Runtime / build
+dist/
+build/
+.cache/
+.tmp/
+
+# Env / secrets
+.env
+.env.*
+!.env.example
+
+# Claudoscope local state (companion save file etc.)
+.claudoscope/
